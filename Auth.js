@@ -1,6 +1,24 @@
 //Copy đoạn mã SDK được Firebase cung cấp khi khởi tạo, dán vào file JS của dự án của bạn. Và tiếp tục thực hiện theo hướng dẫn trên video
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/11.7.3/firebase-app.js";
+  import { getDatabase, set, ref, } from "https://www.gstatic.com/firebasejs/11.7.3/firebase-database.js";
+  import { getAuth, createUserWithAndPassword, signInUserWithAndPassword, onAuthStateChanged, } from "https://www.gstatic.com/firebasejs/11.7.3/firebase-auth.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
 
-      //tính năng đăng kí
+  // Your web app's Firebase configuration
+  const firebaseConfig = {
+    apiKey: "AIzaSyCQgI2bSyxLX9pcBBUASnPUtHQoQwDoE2Y",
+    authDomain: "login-1e014.firebaseapp.com",
+    projectId: "login-1e014",
+    storageBucket: "login-1e014.firebasestorage.app",
+    messagingSenderId: "920895151351",
+    appId: "1:920895151351:web:4912a5150e11fd5403c7f2"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+      //tính năng đăng ký
       document.addEventListener('DOMContentLoaded', function() {
         const signUpButton = document.getElementById('signUp');
 
